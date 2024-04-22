@@ -12,5 +12,5 @@ double numericDiff(double (*f)(double), double x, double eps=0.001){
 int main(){
     double (*pfunc)(double);
     pfunc = func;
-    cout<<numericDiff()
+    cout<<numericDiff(pfunc,2);
 }
