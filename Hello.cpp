@@ -1,8 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    int a = 0;
-    
+double func(double x){
+    return x*x;
+}
 
+double numericDiff(double (*f)(double), double x, double eps=0.001){
+    return (f(x + eps) - f(x)) / eps;
+}
+
+int main(){
+    double (*pfunc)(double);
+    pfunc = func;
+    cout<<numericDiff()
 }
